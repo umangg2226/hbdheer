@@ -12,6 +12,9 @@
     <title>🎂 Hiru ❤️</title>
   </head>
   <body>
+    <audio allow="autoplay" autoplay loop id="playAudio">
+      <source src="hbdtune.mp3" />
+    </audio>
     <div class="cover super-centered-container">
       <canvas id="can">Get a browser</canvas>
       <div class="overlay-static">
@@ -23,20 +26,20 @@
           May your special day cause your heart to overflow with nothing but
           pure happiness and joy. I love you so much, babe. ❤️🥰
         </h1>
+        <div class="celebrate-container">
+          <button class="btn-animate" onclick="playAudio()">
+            Click Me & Celebrate ❤️🥰
+          </button>
+        </div>
       </div>
     </div>
-    <iframe
-      src="hbdtune.mp3"
-      allow="autoplay"
-      style="display: none"
-      id="iframeAudio"
-    >
-    </iframe>
-    <audio autoplay loop id="playAudio">
-      <source src="hbdtune.mp3" />
-    </audio>
   </body>
   <script>
+    const playAudio = () => {
+      var x = document.getElementById('playAudio');
+      x.play();
+    };
+
     const TwoPI = Math.PI * 2;
     var w = window.innerWidth;
     var h = window.innerHeight;
@@ -147,14 +150,6 @@
       var y2 = y * y;
       // Simplest Equation of lurve
       return Math.pow(x2 + y2 - 1, 3) - x2 * (y2 * y) <= 0;
-    }
-
-    var isChrome =
-      /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    if (!isChrome) {
-      $('#iframeAudio').remove();
-    } else {
-      $('#playAudio').remove(); // just to make sure that it will not have 2x audio in the background
     }
   </script>
 </html>
