@@ -16,21 +16,23 @@
       <source src="hbdtune.mp3" />
     </audio>
     <div class="cover super-centered-container">
-      <canvas id="can">Get a browser</canvas>
-      <div class="overlay-static">
-        <div class="inline-blocks">
-          <h2 class="twenty-one block">❤️ 24 + 1 🎂</h2>
+      <div class="page-1">
+        <canvas id="can">Get a browser</canvas>
+        <div class="overlay-static">
+          <div class="inline-blocks">
+            <h2 class="twenty-one block">❤️ 24 + 1 🎂</h2>
+          </div>
+          <h1 class="bday">Happy Birthday <a>Hiru...😘</a></h1>
+          <h1 class="bday-subtitle">
+            May your special day cause your heart to overflow with nothing but
+            pure love, happiness and joy. I love you so much, babe. ❤️🥰
+          </h1>
         </div>
-        <h1 class="bday">Happy Birthday <a>Hiru...😘</a></h1>
-        <h1 class="bday-subtitle">
-          May your special day cause your heart to overflow with nothing but
-          pure love, happiness and joy. I love you so much, babe. ❤️🥰
-        </h1>
-      </div>
-      <div class="celebrate-container">
-        <button class="btn-animate" onclick="playAudio()">
-          🎉 Click Me & Celebrate 🎉
-        </button>
+        <div class="celebrate-container">
+          <button class="btn-animate" onclick="playAudio()">
+            🎉 Click Me & Celebrate 🎉
+          </button>
+        </div>
       </div>
     </div>
   </body>
@@ -43,6 +45,27 @@
         var elem = document.getElementsByClassName('celebrate-container');
         elem[0].style.opacity = '0';
       }, 1000);
+
+      setTimeout(() => {
+        var div1 = document.createElement('div');
+        div1.classList.add('page-2');
+        var div2 = document.createElement('div');
+        div2.classList.add('overlay-static');
+        var textH1 = document.createElement('h1');
+        textH1.classList.add('bday');
+        var t = document.createTextNode("🎉 Let's Party 🥳");
+        textH1.appendChild(t);
+        div2.appendChild(textH1);
+        div1.appendChild(div2);
+        let old = document.getElementsByClassName('page-1');
+        old[0].style.opacity = 0;
+        setTimeout(() => {
+          $('.page-1').remove();
+          var finalDiv = document.getElementsByClassName('cover');
+          finalDiv[0].appendChild(div1);
+          x.pause();
+        }, 1000);
+      }, 42000);
     };
 
     const TwoPI = Math.PI * 2;
