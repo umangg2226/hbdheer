@@ -11,7 +11,7 @@
 }
 
 .twenty-one {
-  font-size: 70px;
+  font-size: 50px;
   font-family: 'Montserrat', sans-serif;
   line-height: 180px;
   color: #fff;
@@ -22,17 +22,17 @@
 }
 
 .bday {
-  font-size: 18px;
+  font-size: 22px;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   text-align: center;
-  margin: 5px 30px;
+  margin: 8px 30px;
 }
 
 .bday-subtitle {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   text-align: center;
@@ -180,11 +180,18 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px;
+  transition: 0.25s;
+  position: absolute;
+  bottom: 5%;
+}
+
+.bday > a {
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 600px) {
   .twenty-one {
-    font-size: 70px;
+    font-size: 50px;
     font-family: 'Montserrat', sans-serif;
     line-height: 180px;
     color: #fff;
@@ -194,16 +201,19 @@ body {
     text-align: center;
   }
   .bday {
-    font-size: 18px;
+    font-size: 22px;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     text-align: center;
-    margin: 5px 30px;
+    margin: 8px 30px;
+  }
+  .bday > a {
+    font-weight: bold;
   }
   .bday-subtitle {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
     text-align: center;

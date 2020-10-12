@@ -9,7 +9,7 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <title>🎂 Hiru ❤️</title>
+    <title>❤️Happy Birthday Hiru...🎂</title>
   </head>
   <body>
     <audio allow="autoplay" autoplay loop id="playAudio">
@@ -19,18 +19,18 @@
       <canvas id="can">Get a browser</canvas>
       <div class="overlay-static">
         <div class="inline-blocks">
-          <h2 class="twenty-one block">24 + 1 🎂</h2>
+          <h2 class="twenty-one block">❤️ 24 + 1 🎂</h2>
         </div>
         <h1 class="bday">Happy Birthday <a>Hiru...😘</a></h1>
         <h1 class="bday-subtitle">
           May your special day cause your heart to overflow with nothing but
-          pure happiness and joy. I love you so much, babe. ❤️🥰
+          pure love, happiness and joy. I love you so much, babe. ❤️🥰
         </h1>
-        <div class="celebrate-container">
-          <button class="btn-animate" onclick="playAudio()">
-            Click Me & Celebrate ❤️🥰
-          </button>
-        </div>
+      </div>
+      <div class="celebrate-container">
+        <button class="btn-animate" onclick="playAudio()">
+          🎉 Click Me & Celebrate 🎉
+        </button>
       </div>
     </div>
   </body>
@@ -38,6 +38,11 @@
     const playAudio = () => {
       var x = document.getElementById('playAudio');
       x.play();
+      render();
+      setTimeout(() => {
+        var elem = document.getElementsByClassName('celebrate-container');
+        elem[0].style.opacity = '0';
+      }, 1000);
     };
 
     const TwoPI = Math.PI * 2;
@@ -138,8 +143,6 @@
 
       requestAnimationFrame(render);
     }
-
-    render();
 
     //
     function isOnHeart(x, y) {
